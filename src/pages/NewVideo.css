@@ -1,0 +1,10 @@
+.new-video-page {
+    padding: 20px;
+    background-color: #f4f4f9;
+    text-align: center;
+  }
+  
+  .new-video-page h1 {
+    margin-bottom: 20px;
+    color: #333;
+  }
