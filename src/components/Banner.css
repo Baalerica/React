@@ -1,0 +1,16 @@
+.banner {
+    text-align: center;
+    padding: 20px;
+    background-color: #eee;
+  }
+  
+  .banner-images {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .banner-images img {
+    width: 150px;
+    height: auto;
+  }

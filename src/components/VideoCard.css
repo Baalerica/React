@@ -1,0 +1,49 @@
+.video-card {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #fff;
+    text-align: center;
+  }
+  
+  .video-card h3 {
+    margin: 0 0 10px;
+  }
+  
+  .video-card p {
+    margin: 0 0 10px;
+  }
+  
+  .video-card a {
+    display: block;
+    color: #007bff;
+    text-decoration: none;
+    margin-bottom: 10px;
+  }
+  
+  .video-card a:hover {
+    text-decoration: underline;
+  }
+  
+  .video-card button {
+    margin-right: 5px;
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .video-card button:hover {
+    background-color: #c9302c;
+  }
+  
+  .video-card button:last-child {
+    background-color: #5cb85c;
+  }
+  
+  .video-card button:last-child:hover {
+    background-color: #4cae4c;
+  }

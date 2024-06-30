@@ -1,0 +1,14 @@
+.categories {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.categories h2 {
+  text-align: center;
+}
+
+.category-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}

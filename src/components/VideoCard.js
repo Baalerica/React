@@ -1,9 +1,9 @@
 import React from 'react';
+import './VideoCard.css';
 
-
-const VideoItem = ({ video, onDelete, onEdit }) => {
+const VideoCard = ({ video, onDelete, onEdit }) => {
   return (
-    <div className="video-item">
+    <div className="video-card">
       <h3>{video.title}</h3>
       <p>{video.description}</p>
       <a href={video.url} target="_blank" rel="noopener noreferrer">Watch</a>
@@ -13,4 +13,4 @@ const VideoItem = ({ video, onDelete, onEdit }) => {
   );
 };
 
-export default VideoItem;
+export default VideoCard;
