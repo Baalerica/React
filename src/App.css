@@ -1,6 +1,8 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f9;
+  background-image: url('/public/fondo.png');
+  background-size: cover; 
+  background-position: center; 
   margin: 0;
   padding: 0;
   display: flex;
@@ -8,7 +10,6 @@ body {
   align-items: center;
   height: 100vh;
 }
-
 .container {
   background: #fff;
   padding: 20px;
@@ -82,4 +83,25 @@ button:hover {
 
 .video-item button:hover {
   background-color: #c9302c;
+}
+.container {
+  flex: 1;
+}
+
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  background-color: black;
+  color: rgb(134, 13, 177);
+}
+
+.footer .logo {
+  font-size: 18px;
+  font-weight: bold;
+}
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }

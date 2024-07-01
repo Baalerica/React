@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="logo">VideoPlatform</div>
-      <p>&copy; 2024 VideoPlatform. All rights reserved.</p>
+      <p>&copy; 2024 Baalerica. All rights reserved.</p>
     </footer>
   );
 };

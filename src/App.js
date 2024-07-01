@@ -6,10 +6,8 @@ import Footer from './components/Footer';
 import VideoForm from './components/VideoForm';
 import VideoList from './components/VideoList';
 import Modal from './components/Modal';
-import NewVideo from './pages/NewVideo';
 import { getVideos, deleteVideo } from './api';
 import './App.css';
-
 
 const App = () => {
   const [currentVideo, setCurrentVideo] = useState(null);
@@ -31,7 +29,7 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div id="root">
       <Header />
       <Banner />
       <Categories

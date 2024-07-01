@@ -1,11 +1,12 @@
 .footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: white;
-  }
-  
-  .footer .logo {
-    font-size: 18px;
-    font-weight: bold;
-  }
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  background-color: black;
+  color: rgb(134, 13, 177);
+}
+
+.footer .logo {
+  font-size: 18px;
+  font-weight: bold;
+}
