@@ -4,6 +4,8 @@
   padding: 20px;
   background-color: black;
   color: rgb(134, 13, 177);
+  position: relative; 
+  margin-top: 20px; 
 }
 
 .footer .logo {

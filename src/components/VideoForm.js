@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { addVideo, updateVideo } from '../api';
+import './VideoForm.css';
 
 const VideoForm = ({ currentVideo, setCurrentVideo, refreshVideos }) => {
   const [title, setTitle] = useState('');

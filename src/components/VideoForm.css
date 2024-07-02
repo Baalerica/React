@@ -1,0 +1,24 @@
+form {
+    background-color: #BF05F2; 
+    padding: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    max-width: 400px; 
+    margin: auto; 
+  }
+  
+
+  button {
+    background-color: #332859;
+    color: white; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+  }
+  
+  button:hover {
+    background-color: #415CF2; 
+  }
+  

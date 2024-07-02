@@ -7,6 +7,30 @@
   text-align: center;
 }
 
+.category-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.category-button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #e0e0e0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.category-button.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.category-button:hover {
+  background-color: #d4d4d4;
+}
+
 .category-list {
   display: flex;
   flex-wrap: wrap;

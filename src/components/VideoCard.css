@@ -1,9 +1,9 @@
 .video-card {
-    border: 1px solid #ddd;
+    border: 1px solid #000000;
     border-radius: 4px;
     padding: 10px;
     margin: 10px;
-    background-color: #fff;
+    background-color: #17c763;
     text-align: center;
   }
   
@@ -28,7 +28,7 @@
   
   .video-card button {
     margin-right: 5px;
-    background-color: #d9534f;
+    background-color: #6907F2;
     color: white;
     border: none;
     padding: 5px 10px;
@@ -37,13 +37,13 @@
   }
   
   .video-card button:hover {
-    background-color: #c9302c;
+    background-color: #6907F2;
   }
   
   .video-card button:last-child {
-    background-color: #5cb85c;
+    background-color: #332859;
   }
   
   .video-card button:last-child:hover {
-    background-color: #4cae4c;
+    background-color: #332859;
   }
