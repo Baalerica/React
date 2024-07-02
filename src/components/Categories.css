@@ -1,8 +1,6 @@
 .categories {
   padding: 20px;
-  background-color: #BF05F2;
-  position: relative; 
-  margin-top: 60px; 
+  background-color: #f9f9f9;
 }
 
 .categories h2 {
@@ -12,29 +10,25 @@
 .category-buttons {
   display: flex;
   justify-content: center;
+  gap: 10px;
   margin-bottom: 20px;
 }
 
-.category-button {
-  margin: 0 10px;
+.category-buttons button {
   padding: 10px 20px;
   border: none;
-  background-color: #415CF2;
+  border-radius: 5px;
+  background-color: #332859;
+  color: white;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-.category-button.active {
-  background-color: #332859;
-  color: white;
+.category-buttons button:hover {
+  background-color: #415CF2;
 }
 
-.category-button:hover {
-  background-color: #3F1973;
-}
-
-.category-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+.category-buttons button.active {
+  background-color: #6907F2;
+  font-weight: bold;
 }

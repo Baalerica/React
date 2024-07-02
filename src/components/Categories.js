@@ -1,41 +1,35 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Category from './Category';
 import './Categories.css';
 
-const Categories = ({ videos, setCurrentVideo, handleDelete, setShowModal }) => {
+const Categories = ({ videos, setCurrentVideo, handleDelete, setShowModal, handleFilter, selectedCategory }) => {
   const categories = ["Frontend", "Backend", "Innovación", "Gestión"];
-  const [selectedCategory, setSelectedCategory] = useState(null);
-
-  const filteredVideos = selectedCategory
-    ? videos.filter(video => video.category === selectedCategory)
-    : videos;
 
   return (
     <div className="categories">
       <h2>Categorías</h2>
       <div className="category-buttons">
+        <button onClick={() => handleFilter('')} className={!selectedCategory ? 'active' : ''}>All</button>
         {categories.map(category => (
           <button
             key={category}
-            className={`category-button ${selectedCategory === category ? 'active' : ''}`}
-            onClick={() => setSelectedCategory(category)}
+            onClick={() => handleFilter(category)}
+            className={selectedCategory === category ? 'active' : ''}
           >
             {category}
           </button>
         ))}
       </div>
-      <div className="category-list">
-        {categories.map(category => (
-          <Category
-            key={category}
-            category={category}
-            videos={filteredVideos.filter(video => video.category === category)}
-            setCurrentVideo={setCurrentVideo}
-            handleDelete={handleDelete}
-            setShowModal={setShowModal}
-          />
-        ))}
-      </div>
+      {categories.map(category => (
+        <Category
+          key={category}
+          category={category}
+          videos={videos.filter(video => video.category === category)}
+          setCurrentVideo={setCurrentVideo}
+          handleDelete={handleDelete}
+          setShowModal={setShowModal}
+        />
+      ))}
     </div>
   );
 };

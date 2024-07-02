@@ -13,13 +13,18 @@ const App = () => {
   const [currentVideo, setCurrentVideo] = useState(null);
   const [videos, setVideos] = useState([]);
   const [showModal, setShowModal] = useState(false);
+  const [filteredVideos, setFilteredVideos] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState('');
 
   useEffect(() => {
     refreshVideos();
   }, []);
 
   const refreshVideos = () => {
-    getVideos().then(setVideos);
+    getVideos().then(videos => {
+      setVideos(videos);
+      setFilteredVideos(videos);
+    });
   };
 
   const handleDelete = (id) => {
@@ -28,24 +33,41 @@ const App = () => {
     });
   };
 
+  const handleFilter = (category) => {
+    setSelectedCategory(category);
+    if (category === '') {
+      setFilteredVideos(videos);
+    } else {
+      setFilteredVideos(videos.filter(video => video.category === category));
+    }
+  };
+
   return (
     <div id="root">
-      <Header currentPage="home" />
+      <Header />
       <Banner />
       <Categories
         videos={videos}
         setCurrentVideo={setCurrentVideo}
         handleDelete={handleDelete}
         setShowModal={setShowModal}
+        handleFilter={handleFilter}
+        selectedCategory={selectedCategory}
       />
-      <div className="container" id="new-video">
-        <h1>Video Management Platform</h1>
-        <VideoForm
-          currentVideo={currentVideo}
-          setCurrentVideo={setCurrentVideo}
-          refreshVideos={refreshVideos}
+      <div className="content">
+        <div className="container" id="new-video">
+          <h1>Video Management Platform</h1>
+          <VideoForm
+            currentVideo={currentVideo}
+            setCurrentVideo={setCurrentVideo}
+            refreshVideos={refreshVideos}
+          />
+        </div>
+        <VideoList 
+          videos={filteredVideos} 
+          setCurrentVideo={setCurrentVideo} 
+          handleDelete={handleDelete} 
         />
-        <VideoList setCurrentVideo={setCurrentVideo} refreshVideos={refreshVideos} />
       </div>
       <Footer />
       <Modal show={showModal} onClose={() => setShowModal(false)}>

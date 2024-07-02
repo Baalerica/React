@@ -1,48 +1,42 @@
 .video-list-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
   margin-top: 20px;
 }
 
 .video-item {
-  background-color: #f9f9f9;
-  padding: 15px;
-  margin: 10px 0;
+  background-color: #fff;
+  padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 80%;
-  max-width: 600px;
+  width: 300px;
+  text-align: center;
 }
 
-.video-item:hover {
-  background-color: #e9e9e9;
+.video-thumbnail {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
 
-.video-item-header {
+.video-actions {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.video-item-title {
-  font-size: 1.2em;
-  font-weight: bold;
-}
-
-.video-item-actions {
-  display: flex;
+  justify-content: center;
   gap: 10px;
+  margin-top: 10px;
 }
 
-.video-item-button {
-  padding: 5px 10px;
+.video-actions button {
+  padding: 10px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  background-color: #332859;
+  color: white;
 }
 
-.video-item-button:hover {
-  background-color: #d4d4d4;
+.video-actions button:hover {
+  background-color: #415CF2;
 }
