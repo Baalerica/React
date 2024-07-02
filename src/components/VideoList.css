@@ -1,0 +1,48 @@
+.video-list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.video-item {
+  background-color: #f9f9f9;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 600px;
+}
+
+.video-item:hover {
+  background-color: #e9e9e9;
+}
+
+.video-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.video-item-title {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.video-item-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.video-item-button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.video-item-button:hover {
+  background-color: #d4d4d4;
+}

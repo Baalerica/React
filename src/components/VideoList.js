@@ -1,26 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import { getVideos, deleteVideo } from '../api';
 import VideoItem from './VideoItem';
+import './VideoList.css';
 
-const VideoList = ({ setCurrentVideo }) => {
+const VideoList = ({ setCurrentVideo, refreshVideos }) => {
   const [videos, setVideos] = useState([]);
 
-  const refreshVideos = () => {
-    getVideos().then(setVideos);
-  };
-
   useEffect(() => {
-    refreshVideos();
+    getVideos().then(setVideos);
   }, []);
 
   const handleDelete = (id) => {
     deleteVideo(id).then(() => {
       refreshVideos();
+      getVideos().then(setVideos); 
     });
   };
 
   return (
-    <div>
+    <div className="video-list-container">
       {videos.map(video => (
         <VideoItem key={video.id} video={video} onDelete={handleDelete} onEdit={() => setCurrentVideo(video)} />
       ))}

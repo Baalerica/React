@@ -30,7 +30,7 @@ const App = () => {
 
   return (
     <div id="root">
-      <Header />
+      <Header currentPage="home" />
       <Banner />
       <Categories
         videos={videos}
@@ -45,7 +45,7 @@ const App = () => {
           setCurrentVideo={setCurrentVideo}
           refreshVideos={refreshVideos}
         />
-        <VideoList setCurrentVideo={setCurrentVideo} />
+        <VideoList setCurrentVideo={setCurrentVideo} refreshVideos={refreshVideos} />
       </div>
       <Footer />
       <Modal show={showModal} onClose={() => setShowModal(false)}>
